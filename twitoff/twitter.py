@@ -10,8 +10,8 @@ TWITTER_USERS = ['calebhicks', 'elonmusk', 'rrherr', 'SteveMartinToGo',
                  'common_squirrel', 'KenJennings', 'conanobrien',
                  'big_ben_clock', 'IAM_SHAKESPEARE']
 
-TWITTER_API_KEY = getenv('TWITTER_API_KEY')
-TWITTER_API_KEY_SECRET = getenv('TWITTER_API_KEY_SECRET')
+TWITTER_API_KEY = getenv('WqBA9blzakJogGRAFT9K06RZ6')
+TWITTER_API_KEY_SECRET = getenv('sftM99bgpCti0JYMGgIDMWRlZTV7ccBIECvwFHAvWt654rJ93D')
 TWITTER_AUTH = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_KEY_SECRET)
 TWITTER = tweepy.API(TWITTER_AUTH)
 BASILICA = basilica.Connection(getenv('BASILICA_KEY'))
@@ -49,3 +49,9 @@ def insert_example_users():
     """Example data to play with."""
     add_or_update_user('austen')
     add_or_update_user('elonmusk')
+    add_or_update_user('IAM_SHAKESPEARE')
+    add_or_update_user('big_ben_clock')
+    add_or_update_user('SteveMartinToGo')
+    add_or_update_user('conanobrien')
+    add_or_update_user('KenJennings')
+    add_or_update_user('nasa')
