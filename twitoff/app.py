@@ -5,13 +5,16 @@ from .models import DB, User, insert_example_users
 
 def create_app():
     """Create and configure an instance of the Flask application."""
-    app = Flask(__name__)
+    app = Flask(__name__)  # This is an initialization of the app
+
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
     DB.init_app(app)
 
     # ... TODO make the app!
-    @app.route('/')
+    @app.route('/')  # When you set route this it returns what you want on your page
     def root():
         return render_template('base.html', title='Home',
                                users=User.query.all())
