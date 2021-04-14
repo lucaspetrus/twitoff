@@ -13,7 +13,7 @@ TWITTER_API_KEY = getenv('')
 TWITTER_API_KEY_SECRET = getenv('password')
 TWITTER_AUTH = tweepy.OAuthHandler(TWITTER_API_KEY, TWITTER_API_KEY_SECRET)
 TWITTER = tweepy.API(TWITTER_AUTH)
-BASILICA = basilica.Connection(getenv('223da4a6-be48-bc4b-8892-7c219e1b0906'))
+BASILICA = basilica.Connection(getenv(''))
 
 
 def add_or_update_user(username):
